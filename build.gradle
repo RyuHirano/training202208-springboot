@@ -9,6 +9,9 @@ plugins {
 
 	// checkstyle
 	id 'checkstyle'
+
+	// jacoco
+	id 'jacoco'
 }
 
 apply plugin: "com.diffplug.spotless"
@@ -75,6 +78,14 @@ spotless {
 	java {
 		googleJavaFormat()
 	}
+}
+
+// jacoco
+test {
+	finalizedBy jacocoTestReport
+}
+jacocoTestReport {
+	dependsOn test
 }
 
 tasks.named('test') {
