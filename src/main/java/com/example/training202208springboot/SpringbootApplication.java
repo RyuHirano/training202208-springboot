@@ -1,12 +1,14 @@
 package com.example.training202208springboot;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@MapperScan("com.example.training202208springboot.data.mapper")
 @SpringBootApplication
-public class Training202208SpringbootApplication {
+public class SpringbootApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(Training202208SpringbootApplication.class, args);
+    SpringApplication.run(SpringbootApplication.class, args);
   }
 }

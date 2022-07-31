@@ -34,7 +34,10 @@ repositories {
 ext.versions = [
 		'apacheCommonsLang3': '3.12.0',
 		'apacheCommonsCollections': '4.4',
-		'apacheCommonBeanUtils': '1.9.4'
+		'apacheCommonBeanUtils': '1.9.4',
+		'myBatisStarter': '2.2.2',
+		'mySqlConnector': '8.0.30',
+		'h2': '2.1.214'
 ]
 
 dependencies {
@@ -64,6 +67,18 @@ dependencies {
 
 	// https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils
 	implementation "commons-beanutils:commons-beanutils:${versions.apacheCommonBeanUtils}"
+
+	// MyBatis
+	// https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter
+	implementation "org.mybatis.spring.boot:mybatis-spring-boot-starter:${versions.myBatisStarter}"
+
+	// MySQL
+	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+	implementation "mysql:mysql-connector-java:${versions.mySqlConnector}"
+
+	// H2
+	// https://mvnrepository.com/artifact/com.h2database/h2
+	testImplementation "com.h2database:h2:${versions.h2}"
 }
 
 checkstyle {
