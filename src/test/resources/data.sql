@@ -1,1 +1,2 @@
-INSERT INTO `users` (`name`) VALUES ('Big Advenure');
+INSERT INTO `users` (`name`) VALUES ('Jun Sito');
+INSERT INTO `users` (`name`) VALUES ('Taro Yamada');

@@ -3,8 +3,34 @@
 <mapper namespace="com.example.training202208springboot.data.mapper.UserMapper">
 
     <select id="select" resultType="com.example.training202208springboot.data.mapper.entity.UserEntity">
-
-        SELECT id, name FROM users;
-
+        SELECT id, name FROM users
+        <where>
+            id = #{user.id}
+        </where>
     </select>
+
+    <insert id="insert">
+        INSERT INTO users (name)
+        VALUES
+        <foreach item="user" collection="userList" open="(" separator="," close=")">
+            #{user.name}
+        </foreach>
+    </insert>
+
+    <update id="update">
+        UPDATE users
+        <set>
+            name = #{user.name}
+        </set>
+        <where>
+            id = #{user.id}
+        </where>
+    </update>
+
+    <delete id="delete">
+        DELETE FROM users
+        <where>
+            id = #{user.id}
+        </where>
+    </delete>
 </mapper>
