@@ -6,6 +6,9 @@
         SELECT id, name FROM users
         <where>
             id = #{user.id}
+            <if test="user.name != null">
+                AND name = #{user.name}
+            </if>
         </where>
     </select>
 
