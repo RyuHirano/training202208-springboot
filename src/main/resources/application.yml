@@ -11,7 +11,16 @@ mybatis:
     mapUnserScoreToCamelCase: true
   mapper-locations: "classpath*:mybatis/mapper/*Mapper.xml"
 
+# Swagger
+springdoc:
+  spring-ui:
+    operations-sorter: alpha
+    tags-sorter: alpha
+    enabled: true
+  cache:
+    disabled: true
 
+# Sample
 fruits:
   name: apple
   price:

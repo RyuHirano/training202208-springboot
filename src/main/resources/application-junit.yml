@@ -5,6 +5,8 @@ spring:
     url: jdbc:h2:mem:study
     username: sa
     password:
+
+# H2のコンソール設定
 #  h2:
 #    console:
 #      enabled: true # http://localhost:8080/h2-console

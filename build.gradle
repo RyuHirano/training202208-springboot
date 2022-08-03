@@ -37,7 +37,8 @@ ext.versions = [
 		'apacheCommonBeanUtils': '1.9.4',
 		'myBatisStarter': '2.2.2',
 		'mySqlConnector': '8.0.30',
-		'h2': '2.1.214'
+		'h2': '2.1.214',
+		'swagger': '1.6.9'
 ]
 
 dependencies {
@@ -79,6 +80,10 @@ dependencies {
 	// H2
 	// https://mvnrepository.com/artifact/com.h2database/h2
 	testImplementation "com.h2database:h2:${versions.h2}"
+
+	// Swagger(springdoc)
+	// https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui
+	implementation "org.springdoc:springdoc-openapi-ui:${versions.swagger}";
 }
 
 checkstyle {
